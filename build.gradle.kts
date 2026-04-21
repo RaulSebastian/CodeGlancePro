@@ -91,6 +91,7 @@ intellijPlatformTesting {
 		register("runRider") {
 			type = IntelliJPlatformType.Rider
 			version = properties("riderPlatformVersion")
+			useInstaller = false
 			sandboxDirectory = project.layout.projectDirectory.dir(properties("riderSandboxDir").get())
 			plugins {
 				plugins(properties("defaultPlugins").map { it.split(',') })
